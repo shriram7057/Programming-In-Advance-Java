@@ -1,0 +1,27 @@
+//JComboBox Class
+import javax.swing.*;
+import java.awt.*;
+class JComboBoxDemo extends JFrame
+{
+	JComboBoxDemo()
+	{
+		Container c=getContentPane();
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		JComboBox jcb=new JComboBox();
+		jcb.addItem("C Lang");
+		jcb.addItem("C++ Lang");
+		jcb.addItem("Java Lang");
+		jcb.addItem("Python Lang");
+		jcb.addItem("PHP Lang");
+		c.add(jcb);
+	}
+	public static void main(String args[])
+	{
+		JComboBoxDemo j1=new JComboBoxDemo();
+		j1.setVisible(true);
+		j1.setTitle("JComboBoxDemo");
+		j1.setSize(500,500);
+		j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

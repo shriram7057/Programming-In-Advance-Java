@@ -1,0 +1,24 @@
+import javax.swing.*;
+import java.awt.*;
+class JButtonDemo extends JFrame
+{
+	JButtonDemo()
+	{
+		Container c=getContentPane();
+		c.setLayout(new FlowLayout());
+		JButton jb1=new JButton("OK");
+		JButton jb2=new JButton("CANCEL");
+		JButton jb3=new JButton("RETRY");
+		c.add(jb1);
+		c.add(jb2);
+		c.add(jb3);
+	}
+	public static void main(String args[])
+	{
+		JButtonDemo f1=new JButtonDemo();
+		f1.setVisible(true);
+		f1.setTitle("JButton Demo");
+		f1.setSize(500,500);
+		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

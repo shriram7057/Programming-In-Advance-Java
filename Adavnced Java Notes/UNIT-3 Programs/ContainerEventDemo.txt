@@ -1,0 +1,29 @@
+//Class: ContainerEvent & Interface: ContainerListener 
+import java.awt.*;
+import java.awt.event.*;
+class ContainerEventDemo extends Frame implements ContainerListener
+{
+	ContainerEventDemo()
+	{
+		addContainerListener(this);
+		setLayout(new FlowLayout());
+		Button b1=new Button("OK");
+		add(b1);
+		remove(b1);
+	}
+	public void componentAdded(ContainerEvent ce)
+	{
+		System.out.println("Component added...!!!");
+	}
+	public void componentRemoved(ContainerEvent ce)
+	{
+		System.out.println("Component removed...!!!");
+	}
+	public static void main(String args[])
+	{
+		ContainerEventDemo f1=new ContainerEventDemo();
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setTitle("VJTech Frame");
+	}
+}

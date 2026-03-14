@@ -1,0 +1,26 @@
+//JTextField Class
+import javax.swing.*;
+import java.awt.*;
+class JTextFieldDemo extends JFrame
+{
+	JTextFieldDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		JLabel L1=new JLabel("Enter User Name:");
+		JLabel L2=new JLabel("Enter Password:");
+		JTextField tf1=new JTextField("VJTech",30);
+		JTextField tf2=new JTextField(30);
+		JButton b1=new JButton("Login");
+		add(L1);add(tf1);
+		add(L2);add(tf2);
+		add(b1);
+	}
+	public static void main(String args[])
+	{
+		JTextFieldDemo f1=new JTextFieldDemo();
+		f1.setVisible(true);
+		f1.setTitle("My Frame");
+		f1.setSize(500,500);
+	}
+}

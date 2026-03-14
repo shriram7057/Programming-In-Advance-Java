@@ -1,0 +1,35 @@
+import java.awt.*;
+
+class PandelDemo extends Panel
+{
+	PandelDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		Label L1=new Label("This is Panel Window");
+		Button b1=new Button("Panel");
+		add(L1);
+		add(b1);
+	}
+}
+class MainFrameDemo extends Frame
+{
+	MainFrameDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);		
+		Label L1=new Label("This is Frame Window");
+		Button b1=new Button("Frame");
+		add(L1);
+		add(b1);
+		PandelDemo pd1=new PandelDemo();
+		add(pd1);
+	}
+	public static void main(String args[])
+	{
+		MainFrameDemo mfd=new MainFrameDemo();
+		mfd.setVisible(true);
+		mfd.setTitle("Pandel Demo");
+		mfd.setSize(500,500);
+	}
+}

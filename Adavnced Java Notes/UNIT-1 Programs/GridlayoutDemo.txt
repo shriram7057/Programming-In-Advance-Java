@@ -1,0 +1,21 @@
+//Gridlayout Manager
+import java.awt.*;
+class GridlayoutDemo extends Frame
+{
+	GridlayoutDemo()
+	{
+		GridLayout g1=new GridLayout(5,5,15,15);
+		setLayout(g1);
+		for(int i=1;i<=25;i++)
+		{
+			add(new Button("Button "+i));
+		}
+	}	
+	public static void main(String args[])
+	{
+		GridlayoutDemo n1=new GridlayoutDemo();
+		n1.setVisible(true);
+		n1.setTitle("GridlayoutDemo");
+		n1.setSize(500,500);
+	}
+}

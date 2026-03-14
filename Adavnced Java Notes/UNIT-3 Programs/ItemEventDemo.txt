@@ -1,0 +1,29 @@
+//Class: ItemEvent & Interface: ItemListener 
+import java.awt.*;
+import java.awt.event.*;
+class ItemEventDemo extends Frame implements ItemListener
+{
+	Checkbox c1;
+	Label L1;
+	ItemEventDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		c1=new Checkbox("India");
+		L1=new Label("                                                            ");
+		add(c1);
+		add(L1);
+		c1.addItemListener(this);
+	}
+	public void itemStateChanged(ItemEvent ie)
+	{
+		L1.setText("You have selected India Checkbox");
+	}
+	public static void main(String args[])
+	{
+		ItemEventDemo f1=new ItemEventDemo();
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setTitle("VJTech Frame");
+	}
+}

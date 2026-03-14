@@ -1,0 +1,16 @@
+//JFrame class
+import javax.swing.*;
+class JFrameDemo1 extends JFrame
+{
+	JFrameDemo1(String str)
+	{
+		super(str);
+	}
+	public static void main(String args[])
+	{
+		JFrameDemo1 f1=new JFrameDemo1("JFrame Demo");
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

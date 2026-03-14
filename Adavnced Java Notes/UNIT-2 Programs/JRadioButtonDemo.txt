@@ -1,0 +1,64 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class JRadioButtonDemo extends JFrame implements ItemListener
+{
+	JRadioButton c1,c2,c3,c4;
+	JLabel L1;
+	JRadioButtonDemo()
+	{
+		Container c=getContentPane();
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		c1=new JRadioButton("Pune",true);
+		c2=new JRadioButton("Thane");
+		c3=new JRadioButton("Karad");
+		c4=new JRadioButton("Solapur");	
+		L1=new JLabel("                             ");
+		ButtonGroup bg=new ButtonGroup();
+		bg.add(c1);
+		bg.add(c2);
+		bg.add(c3);
+		bg.add(c4);
+		c.add(c1);
+		c.add(c2);
+		c.add(c3);
+		c.add(c4);
+		c.add(L1);
+		c1.addItemListener(this);
+		c2.addItemListener(this);
+		c3.addItemListener(this);
+		c4.addItemListener(this);
+	}
+	public void itemStateChanged(ItemEvent ie)
+	{
+		if(c1.isSelected())
+		{
+			//L1.setText(c1.getText()+" is selected");
+			JOptionPane.showMessageDialog(this,c1.getText()+" is selected");
+		}
+		else if(c2.isSelected())
+		{
+			//L1.setText(c2.getText()+" is selected");
+			JOptionPane.showMessageDialog(this,c2.getText()+" is selected");
+		}
+		else if(c3.isSelected())
+		{
+			//L1.setText(c3.getText()+" is selected");
+			JOptionPane.showMessageDialog(this,c3.getText()+" is selected");
+		}
+		else if(c4.isSelected())
+		{
+			//L1.setText(c4.getText()+" is selected");
+			JOptionPane.showMessageDialog(this,c4.getText()+" is selected");
+		}
+	}
+	public static void main(String args[])
+	{
+		JRadioButtonDemo f1=new JRadioButtonDemo();
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setTitle("VJTech Frame");
+		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

@@ -1,0 +1,33 @@
+//Class: ComponentEvent & Interface: ComponentListener 
+import java.awt.*;
+import java.awt.event.*;
+class ComponentDemo extends Frame implements ComponentListener
+{
+	ComponentDemo()
+	{
+		addComponentListener(this);
+	}
+	public void componentMoved(ComponentEvent ce)
+	{
+		System.out.println("Component moved...!!!");
+	}
+	public void componentResized(ComponentEvent ce)
+	{
+		System.out.println("Component resized...!!!");
+	}
+	public void componentShown(ComponentEvent ce)
+	{
+		System.out.println("Component shown...!!!");
+	}
+	public void componentHidden(ComponentEvent ce)
+	{
+		System.out.println("Component hidden...!!!");
+	}
+	public static void main(String args[])
+	{
+		ComponentDemo f1=new ComponentDemo();
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setTitle("VJTech Frame");
+	}
+}

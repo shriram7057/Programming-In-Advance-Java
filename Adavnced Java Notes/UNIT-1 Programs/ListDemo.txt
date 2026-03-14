@@ -1,0 +1,23 @@
+import java.awt.*;
+class ListDemo extends Frame
+{
+	ListDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		List L1=new List(3,true);
+		L1.add("C Lang");
+		L1.add("C++ Lang");
+		L1.add("Java Lang");
+		L1.add("PHP Lang");
+		L1.add("Python Lang");
+		add(L1);
+	}
+	public static void main(String args[])
+	{
+		ListDemo f1=new ListDemo();
+		f1.setVisible(true);
+		f1.setSize(500,500);
+		f1.setTitle("ListDemo");
+	}
+}

@@ -1,0 +1,23 @@
+//JLabel Class
+import javax.swing.*;
+import java.awt.*;
+class JLabelDemo extends JFrame
+{
+	JLabelDemo()
+	{
+		Container c=getContentPane();
+		FlowLayout f1=new FlowLayout();
+		c.setLayout(f1);
+		ImageIcon ii=new ImageIcon("vjtech.png");
+		JLabel L1=new JLabel(ii);
+		c.add(L1);
+	}
+	public static void main(String args[])
+	{
+		JLabelDemo f1=new JLabelDemo();
+		f1.setVisible(true);
+		f1.setTitle("JLabel Demo");
+		f1.setSize(500,500);
+		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

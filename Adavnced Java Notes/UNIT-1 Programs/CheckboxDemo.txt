@@ -1,0 +1,23 @@
+//Checkbox
+import java.awt.*;
+class CheckboxDemo extends Frame 
+{
+	CheckboxDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		Checkbox c1=new Checkbox();
+		Checkbox c2=new Checkbox("C Lang");
+		Checkbox c3=new Checkbox("C++ Lang",true);
+		add(c1);
+		add(c2);
+		add(c3);
+	}
+	public static void main(String args[])
+	{
+		CheckboxDemo f1=new CheckboxDemo();
+		f1.setVisible(true);
+		f1.setSize(500,400);
+		f1.setTitle("Checkbox Demo");
+	}
+}

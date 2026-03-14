@@ -1,0 +1,21 @@
+//JTextField Class
+import javax.swing.*;
+import java.awt.*;
+class JTextAreaDemo extends JFrame
+{
+	JTextAreaDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		JTextArea jta=new JTextArea(20,20);
+		add(jta);
+	}
+	public static void main(String args[])
+	{
+		JTextAreaDemo f1=new JTextAreaDemo();
+		f1.setVisible(true);
+		f1.setTitle("My Frame");
+		f1.setSize(500,500);
+		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

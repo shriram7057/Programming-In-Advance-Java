@@ -1,0 +1,41 @@
+//Class: ActionEvent & Interface: ActionListener
+import java.awt.*;
+import java.awt.event.*;
+class ActionEventDemo extends Frame implements ActionListener
+{
+	Button b1,b2;
+	Label L1;
+	ActionEventDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		b1=new Button("OK");
+		b2=new Button("CANCEL");
+		L1=new Label("                                          ");
+		add(b1);
+		add(b2);
+		add(L1);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+		//String str=ae.getActionCommand();
+		//if(str.equals("OK"))
+		if(ae.getSource()==b1)
+		{
+			L1.setText("Ok Button pressed");
+		}
+		else
+		{
+			L1.setText("Cancel Button pressed");
+		}
+	}
+	public static void main(String args[])
+	{
+		ActionEventDemo a1=new ActionEventDemo();
+		a1.setVisible(true);
+		a1.setSize(500,500);
+		a1.setTitle("VJTech Frame");
+	}
+}

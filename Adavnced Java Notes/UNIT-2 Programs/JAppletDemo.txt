@@ -1,0 +1,14 @@
+//JApplet Class
+import javax.swing.*;
+import java.awt.*;
+public class JAppletDemo extends JApplet
+{
+	public void paint(Graphics g)
+	{
+		g.drawString("Welcome to Applet Program",150,150);
+	}
+}
+/*
+<applet code="JAppletDemo.class" width="500" height="500">
+</applet>
+*/

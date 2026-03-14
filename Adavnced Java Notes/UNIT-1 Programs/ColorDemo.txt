@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.awt.event.*;
+class ColorDemo extends Frame implements ActionListener
+{
+	Button b1,b2,b3;
+	ColorDemo()
+	{
+		FlowLayout f1=new FlowLayout();
+		setLayout(f1);
+		b1=new Button("Yellow");
+		b2=new Button("Pink");
+		b3=new Button("Blue");
+		add(b1);
+		add(b2);
+		add(b3);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+		String str=ae.getActionCommand();
+		//if(b1==ae.getSource())
+		if(str.equals("Yellow"))
+		{
+			setBackground(Color.yellow);
+		}
+		//else if(b2==ae.getSource())
+		else if(str.equals("Pink"))
+		{
+			setBackground(Color.pink);
+		}
+		else
+		{
+			setBackground(Color.blue);
+		}
+	}
+	public static void main(String args[])
+	{
+		ColorDemo c1=new ColorDemo();
+		c1.setVisible(true);
+		c1.setSize(500,500);
+		c1.setTitle("Color Demo");
+	}
+}

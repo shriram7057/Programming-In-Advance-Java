@@ -1,0 +1,16 @@
+//FileDialog Class
+import java.awt.*;
+class FileDialogDemo extends Frame
+{
+	public static void main(String args[])
+	{
+		FileDialogDemo f1=new FileDialogDemo();
+		f1.setVisible(true);
+		f1.setTitle("FileDialogDemo");
+		f1.setSize(500,500);
+
+		//FileDialog fd1=new FileDialog(f1,"VJTech Save",FileDialog.SAVE);
+		FileDialog fd1=new FileDialog(f1,"VJTech Open",FileDialog.LOAD);
+		fd1.setVisible(true);
+	}
+}

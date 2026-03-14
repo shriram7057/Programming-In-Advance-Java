@@ -1,0 +1,27 @@
+//BorderLayout Manager
+import java.awt.*;
+class BorderLayoutDemo extends Frame
+{
+	BorderLayoutDemo()
+	{
+		BorderLayout g1=new BorderLayout();
+		setLayout(g1);
+		Button b1=new Button("EAST Region");
+		Button b2=new Button("WEST Region");
+		Button b3=new Button("SOUTH Region");
+		Button b4=new Button("NORTH Region");
+		TextArea ta1=new TextArea("This is center region");
+		add(b1,BorderLayout.EAST);
+		add(b2,BorderLayout.WEST);
+		add(b3,BorderLayout.SOUTH);
+		add(b4,BorderLayout.NORTH);
+		add(ta1,BorderLayout.CENTER);
+	}	
+	public static void main(String args[])
+	{
+		BorderLayoutDemo n1=new BorderLayoutDemo();
+		n1.setVisible(true);
+		n1.setTitle("BorderLayoutDemo");
+		n1.setSize(500,500);
+	}
+}

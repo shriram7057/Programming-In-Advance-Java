@@ -1,0 +1,29 @@
+//class:TextEvent & Listener: TextListener
+import java.awt.*;
+import java.awt.event.*;
+class TextEventDemo extends Frame implements TextListener 
+{
+	Label L1;
+	TextEventDemo()
+	{
+		setLayout(new FlowLayout());
+		TextField tf1=new TextField(30);
+		L1=new Label("                                                ");
+		add(tf1);
+		add(L1);
+		tf1.addTextListener(this);
+	}
+	public void textValueChanged(TextEvent te)
+	{
+		L1.setText("TextEvent occurred");
+	}
+	public static void main(String args[])
+	{
+		TextEventDemo m1=new TextEventDemo();
+		m1.setVisible(true);
+		m1.setSize(500,500);
+		m1.setTitle("VJTech Frame");
+	}
+}
+
+

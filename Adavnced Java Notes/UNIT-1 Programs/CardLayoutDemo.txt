@@ -1,0 +1,43 @@
+//CardLayout Manager
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class CardLayoutDemo extends JFrame implements ActionListener
+{
+	CardLayout Card;
+	Container C;
+	Button b1,b2,b3,b4;
+	CardLayoutDemo()
+	{
+		Card=new CardLayout();
+		C=getContentPane();
+		C.setLayout(Card);
+		
+		b1=new Button("C Lang");
+		b2=new Button("C++ Lang");
+		b3=new Button("Java Lang");
+		b4=new Button("Python Lang");
+		
+		C.add(b1,"a");
+		C.add(b2,"b");
+		C.add(b3,"c");
+		C.add(b4,"d");
+		
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);		
+		
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+		Card.next(C);
+	}
+	public static void main(String args[])
+	{
+		CardLayoutDemo cld=new CardLayoutDemo();
+		cld.setVisible(true);
+		cld.setTitle("CardLayoutDemo");
+		cld.setSize(500,500);
+	}
+}
